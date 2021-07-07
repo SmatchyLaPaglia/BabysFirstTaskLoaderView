@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Sharpnado.TaskLoaderView</id>
+    <version>2.4.0</version>
+    <title>TaskLoaderView: free yourself from IsBusy=true!</title>
+    <authors>Jean-Marie Alfonsi</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/roubachof/Sharpnado.TaskLoaderView</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/roubachof/Sharpnado.TaskLoaderView/master/Docs/tlv_icon_tos.png</iconUrl>
+    <description>Free yourself from IsBusy=true!
+The `TaskLoaderView` is a UI component that handles all your UI loading state (Loading, Error, Result, Notification), and removes all the pain of async loading from your view models (try catch / async void / IsBusy / HasErrors / base view models / ...) thanks to its brother the `TaskLoaderNotifier`.
+
+BREAKING CHANGE Version 2.4.0:
+The task source given to to TaskLoaderNotifier is now a Func{bool, Task} (or a Func{bool, Task{T}}) instead of a Func{Task}.
+You can simply change your calls from Loader.Load(() =&gt; InitializeAsync()) to Loader.Load(_ =&gt; InitializeAsync()) to ignore it if you like.
+
+The boolean that is passed now to your task source is a boolean indicating if the notifier is refreshing.
+You can use it for invalidating your cache, for example:
+
+public Task LoadItems(bool isRefreshing)
+{
+    if (isRefreshing || !_cache.ContainsItems())
+    {
+        _cache.InvalidateItems();
+        var items = _httpService.GetItems()
+        _cache.PutItems(items);
+        return items;
+    }
+
+    return _cache.GetItems();
+}
+
+Featuring:
+
+* Default views for all loading states (Loading, Error, Success, Notification, Refresh)
+* Snackbar component
+* Compose notifiers with CompositeTaskLoaderNotifier
+* Stylable views including fonts, accent color, error images, ...
+* Any states are overridable with user custom views and easily positionned with AbsoluteLayout properties
+* Support for Xamarin.Forms.Skeleton nuget package
+* Support for refresh scenarios, and error while refreshing with the ErrorNotificationView
+* Supports Async mvvm ICommand through TaskLoaderCommand
+* Supports loading task on demand with the NotStarted state
+* TaskLoaderNotifier for the ViewModel side taking care of all the error handling and the IsBusy nonsense</description>
+    <releaseNotes>Fix Snackbar BackgroundColor and CompositeLoader behavior.
+BREAKING CHANGE: the task source given to to TaskLoaderNotifier is now a Func{bool, Task} (or a Func{bool, Task{T}}) instead of a Func{Task}.
+You can simply change your calls from Loader.Load(() =&gt; InitializeAsync()); to Loader.Load(_ =&gt; InitializeAsync());
+The booleand that is passed now to your task source is a boolean indicating if the notifier is refreshing.
+You can use it for invalidating your cache for example.
+
+Loader.Load(LoadItems);
+
+public Task LoadItems(bool isRefreshing)
+{
+    if (isRefreshing || !_cache.ContainsItems())
+    {
+         _cache.InvalidateItems();
+         var items = _httpService.GetItems()
+         _cache.PutItems(items);
+         return items;
+    }
+
+    return _cache.GetItems();
+}
+
+When the Refresh command will be called, it will pass automatically the isRefreshing boolean set to true to your task source.</releaseNotes>
+    <copyright>Copyright 2021 Sharpnado</copyright>
+    <tags>xamarin, xamarin.forms, skeleton, loading, states, async, task, loader, isbusy, control, taskloader, taskloadernotifier</tags>
+    <repository type="git" url="https://github.com/roubachof/Sharpnado.TaskLoaderView" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Sharpnado.TaskMonitor" version="1.0.2" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Forms" version="5.0.0.2012" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/jessewonderclark/Documents/Xamarin/TaskLoaderView_SimpleDemo/Sharpnado.TaskLoaderView/bin/Debug/netstandard2.0/Sharpnado.TaskLoaderView.dll" target="lib/netstandard2.0/Sharpnado.TaskLoaderView.dll" />
+  </files>
+</package>

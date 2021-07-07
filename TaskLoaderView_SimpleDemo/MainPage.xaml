@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TaskLoaderView_SimpleDemo.MainPage"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:sharpnado="clr-namespace:Sharpnado.Presentation.Forms.CustomViews;assembly=Sharpnado.TaskLoaderView"
+    xmlns:local="clr-namespace:TaskLoaderView_SimpleDemo;assembly=TaskLoaderView_SimpleDemo"
+    BackgroundColor="Blue">
+
+    <d:ContentPage.BindingContext>
+        <local:ExampleTaskLoaderViewModel />
+    </d:ContentPage.BindingContext>
+
+    <Grid>  
+
+        <sharpnado:TaskLoaderView
+            TaskLoaderNotifier="{Binding Loader}">
+
+            <!--The wrapper for the view shown while the Load task is running-->
+            <sharpnado:TaskLoaderView.LoadingView>
+                <Label
+                    Text="View shown while loading."
+                    FontSize="Title"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    BackgroundColor="Orange" />
+            </sharpnado:TaskLoaderView.LoadingView>
+
+            <!--Other wrappers are available for other task states such as ErrorView, NotStartedView, etc-->
+
+            <!--The main content in the TaskLoaderView is what you'll see if the task completes successfully-->
+            <Label
+                Text="View shown when task completes successfully."
+                FontSize="Title"
+                HorizontalOptions="FillAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                BackgroundColor="LightGoldenrodYellow" />
+
+        </sharpnado:TaskLoaderView>
+
+    </Grid>
+
+</ContentPage>

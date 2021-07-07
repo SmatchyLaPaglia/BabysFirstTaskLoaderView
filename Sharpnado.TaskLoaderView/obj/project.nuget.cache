@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "/TmWTbsxe5xKn27e/J68q9JL+fuC7K2NxEv2YWuy+VLX0MYwT6fuNAKj8ZSaIySUreZfGWEVQ39euk/v5aupSQ==",
+  "success": true,
+  "projectFilePath": "/Users/jessewonderclark/Documents/Xamarin/BabysFirstTaskLoaderView/Sharpnado.TaskLoaderView/Sharpnado.TaskLoaderView.csproj",
+  "expectedPackageFiles": [
+    "/Users/jessewonderclark/.nuget/packages/microsoft.build.tasks.git/1.0.0/microsoft.build.tasks.git.1.0.0.nupkg.sha512",
+    "/Users/jessewonderclark/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/jessewonderclark/.nuget/packages/microsoft.sourcelink.common/1.0.0/microsoft.sourcelink.common.1.0.0.nupkg.sha512",
+    "/Users/jessewonderclark/.nuget/packages/microsoft.sourcelink.github/1.0.0/microsoft.sourcelink.github.1.0.0.nupkg.sha512",
+    "/Users/jessewonderclark/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/jessewonderclark/.nuget/packages/sharpnado.taskmonitor/1.0.2/sharpnado.taskmonitor.1.0.2.nupkg.sha512",
+    "/Users/jessewonderclark/.nuget/packages/stylecop.analyzers/1.2.0-beta.164/stylecop.analyzers.1.2.0-beta.164.nupkg.sha512",
+    "/Users/jessewonderclark/.nuget/packages/stylecop.analyzers.unstable/1.2.0.164/stylecop.analyzers.unstable.1.2.0.164.nupkg.sha512",
+    "/Users/jessewonderclark/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}

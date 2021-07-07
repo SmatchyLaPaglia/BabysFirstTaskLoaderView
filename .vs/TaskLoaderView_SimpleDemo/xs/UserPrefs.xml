@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{CCD09498-D886-465E-828D-617F6894E066}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TaskLoaderView_SimpleDemo/ExampleTaskLoaderViewModel.cs">
+    <Files>
+      <File FileName="TaskLoaderView_SimpleDemo/MainPage.xaml" Line="15" Column="13" />
+      <File FileName="Sharpnado.TaskLoaderView/TaskLoaderNotifier{T}.cs" />
+      <File FileName="TaskLoaderView_SimpleDemo/MainPage.xaml.cs" />
+      <File FileName="TaskLoaderView_SimpleDemo/ExampleTaskLoaderViewModel.cs" Line="26" Column="45" />
+      <File FileName="TaskLoaderView_SimpleDemo/App.xaml.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TaskLoaderView_SimpleDemo" expanded="True">
+            <Node name="TaskLoaderView_SimpleDemo" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.TaskLoaderView__SimpleDemo.iOS TriggeredFromHotReload="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3F84C780-17CF-4616-A6A5-76ECA404E5A2" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TaskLoaderView__SimpleDemo.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_3a_xl_q_10_0_-_api_29" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
